@@ -77,7 +77,7 @@
   @media(max-width:820px){
     .grid{grid-template-columns:1fr}
     body{padding-bottom:70px}
-    .mobile-cta{display:grid;grid-template-columns:1fr;position:fixed;left:0;right:0;bottom:0;z-index:50}
+    .mobile-cta{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:50}
     .mobile-cta a{padding:16px;text-align:center;font-weight:700;text-decoration:none;font-size:1.05rem}
     .mobile-cta .m-call{background:var(--ink);color:#fff}
     .mobile-cta .m-devis{background:var(--hi);color:var(--ink)}
@@ -92,6 +92,11 @@
   .legal h2{font-size:1.6rem;margin:26px 0 8px}
   .legal h2:first-child{margin-top:0}
   .legal p{margin:6px 0;color:var(--ink)}
+
+  .hdr-actions{display:flex;align-items:center;gap:18px}
+  .telbtn{color:#fff;font-weight:600;text-decoration:none;white-space:nowrap}
+  .telbtn:hover{color:var(--hi)}
+  @media(max-width:820px){.telbtn{display:none}}
 </style>
 
 <script type="application/ld+json">
@@ -102,7 +107,7 @@
  "provider": {
   "@type": "GeneralContractor",
   "name": "PROSECUTEC",
-  "email": "info@prosecutec.com"
+  "telephone": "+33 6 68 79 87 06", "email": "info@prosecutec.com"
  },
  "areaServed": [
   "Palaiseau",
@@ -196,7 +201,7 @@
 <header>
   <div class="wrap bar">
     <a class="logo" href="index.html"><img class="logo-img" src="images/logo-prosecutec.webp" alt="PROSECUTEC Rénovation" width="152" height="46"></a>
-    <a class="callbtn" href="index.html#devis">Demander un devis</a>
+    <span class="hdr-actions"><a class="telbtn" href="tel:+33668798706">06 68 79 87 06</a><a class="callbtn" href="index.html#devis">Demander un devis</a></span>
   </div>
 </header>
 <main>
@@ -245,11 +250,12 @@
 <footer>
   <div class="wrap">
     <b>PROSECUTEC</b>
-    <span>Palaiseau et 10 km autour · <a href="mailto:info@prosecutec.com">info@prosecutec.com</a> · <a href="mentions-legales.html">Mentions légales</a></span>
+    <span>Palaiseau et 10 km autour · <a href="tel:+33668798706">06 68 79 87 06</a> · <a href="mailto:info@prosecutec.com">info@prosecutec.com</a> · <a href="mentions-legales.html">Mentions légales</a></span>
   </div>
 </footer>
 
 <div class="mobile-cta">
+  <a class="m-call" href="tel:+33668798706">Appeler</a>
   <a class="m-devis" href="index.html#devis">Demander un devis gratuit</a>
 </div>
 
