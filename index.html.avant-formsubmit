@@ -117,12 +117,6 @@
   .steps{margin:22px 0 0;padding-left:22px;color:#C4CDD5;font-size:1.05rem}
   .steps li{margin-bottom:8px}
   .steps li::marker{color:var(--hi);font-weight:700}
-  /* Plan d'acces : la zone servie et un lien d'itineraire. Lien plutot que carte
-     incrustee, une carte Google deposerait des cookies avant tout consentement. */
-  .zone-acces{margin:22px 0 0;color:#C4CDD5;font-size:1rem;line-height:1.6;max-width:44ch}
-  .zone-acces .itineraire{display:inline-block;margin-top:10px;color:var(--hi);font-weight:600;
-    border-bottom:1px solid rgba(255,194,26,.45);text-decoration:none}
-  .zone-acces .itineraire:hover{border-bottom-color:var(--hi)}
   .faq details{background:#fff;border:1px solid var(--line);padding:16px 20px;margin-bottom:10px}
   .faq summary{font-weight:600;cursor:pointer;font-size:1.05rem}
   .faq p{color:var(--steel);margin:10px 0 0}
@@ -173,56 +167,16 @@
 
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "GeneralContractor",
-  "name": "PROSECUTEC",
-  "description": "Artisan tout corps d'état à Palaiseau et 10 km autour : électricité, plomberie, rénovation complète, peinture, carrelage, terrasse, maçonnerie, ferronnerie et soudure. Neuf comme rénovation.",
-  "telephone": "+33 6 68 79 87 06",
-  "email": "info@prosecutec.com",
-  "areaServed": [
-    "Palaiseau",
-    "Massy",
-    "Orsay",
-    "Igny",
-    "Villebon-sur-Yvette",
-    "Les Ulis",
-    "Champlan",
-    "Bures-sur-Yvette",
-    "Gif-sur-Yvette",
-    "Longjumeau",
-    "Verrières-le-Buisson",
-    "Wissous"
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Palaiseau",
-    "addressRegion": "Île-de-France",
-    "postalCode": "91120",
-    "addressCountry": "FR"
-  },
-  "knowsAbout": [
-    "Électricité",
-    "Plomberie",
-    "Rénovation tout corps d'état",
-    "Peinture",
-    "Enduits",
-    "Placo et cloisons",
-    "Carrelage",
-    "Terrasse",
-    "Maçonnerie",
-    "Ferronnerie",
-    "Soudure TIG MIG chalumeau",
-    "Échafaudage"
-  ],
-  "priceRange": "€€",
-  "openingHours": "Mo-Sa 08:00-19:00",
-  "url": "https://prosecutec.com/",
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 48.7144,
-    "longitude": 2.2458
-  },
-  "hasMap": "https://www.google.com/maps/search/?api=1&query=Palaiseau%2C+91120%2C+France"
+  "@context":"https://schema.org",
+  "@type":"GeneralContractor",
+  "name":"PROSECUTEC",
+  "description":"Artisan tout corps d'état à Palaiseau et 10 km autour : électricité, plomberie, rénovation complète, peinture, carrelage, terrasse, maçonnerie, ferronnerie et soudure. Neuf comme rénovation.",
+  "telephone": "+33 6 68 79 87 06", "email":"info@prosecutec.com",
+  "areaServed":["Palaiseau","Massy","Orsay","Igny","Villebon-sur-Yvette","Les Ulis","Champlan","Bures-sur-Yvette","Gif-sur-Yvette","Longjumeau","Verrières-le-Buisson","Wissous"],
+  "address":{"@type":"PostalAddress","addressLocality":"Palaiseau","addressRegion":"Île-de-France","postalCode":"91120","addressCountry":"FR"},
+  "knowsAbout":["Électricité","Plomberie","Rénovation tout corps d'état","Peinture","Enduits","Placo et cloisons","Carrelage","Terrasse","Maçonnerie","Ferronnerie","Soudure TIG MIG chalumeau","Échafaudage"],
+  "priceRange":"€€",
+  "openingHours":"Mo-Sa 08:00-19:00"
 }
 </script>
 <script type="application/ld+json">
@@ -361,26 +315,14 @@
     <div>
       <p class="eyebrow" style="color:#9FB0BC">Demande de devis</p>
       <h2 class="sec-title">Parlez-moi de votre projet</h2>
-      <p class="lead">Dites-moi en quelques mots ce dont vous avez besoin. <strong>Je vous réponds sous 48 heures</strong>, pour convenir d'une visite et vous faire un devis gratuit.</p>
+      <p class="lead">Dites-moi en quelques mots ce dont vous avez besoin. Je vous rappelle rapidement pour convenir d'une visite et vous faire un devis gratuit.</p>
       <ol class="steps">
         <li>Vous décrivez votre projet</li>
-        <li>Je vous réponds sous 48 h</li>
+        <li>Je vous recontacte rapidement</li>
         <li>Visite sur place et devis gratuit</li>
       </ol>
-      <p class="zone-acces">Zone d'intervention : <strong>Palaiseau (91120) et 10 km autour</strong> —
-        Massy, Orsay, Igny, Villebon-sur-Yvette, Les Ulis, Champlan, Bures-sur-Yvette,
-        Gif-sur-Yvette, Longjumeau, Verrières-le-Buisson, Wissous.
-        <a class="itineraire" href="https://www.google.com/maps/dir/?api=1&amp;destination=Palaiseau%2C+91120%2C+France"
-           target="_blank" rel="noopener">Voir l'itinéraire</a></p>
     </div>
     <form id="devisForm">
-      <!-- FormSubmit : reglages caches. _honey est un piege a robots (invisible pour
-           un visiteur, rempli par un automate) ; _captcha false car l'envoi se fait
-           en arriere-plan, une page captcha le casserait. -->
-      <input type="hidden" name="_subject" value="Demande de devis - site PROSECUTEC">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
       <div class="field"><label for="nom">Votre nom</label><input id="nom" name="nom" required></div>
       <div class="row2">
         <div class="field"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" required></div>
@@ -421,27 +363,15 @@
 </div>
 
 <script>
-  // Envoi reel de la demande de devis (choix de Thierry, 21/09). FormSubmit : gratuit,
-  // illimite, aucun compte. Le point d'entree /ajax/ repond en JSON (envoi en arriere-plan,
-  // le visiteur ne quitte pas la page). L'adresse est deja publique dans le pied de page.
-  // PREMIER ENVOI : FormSubmit envoie un mail de confirmation a info@prosecutec.com ;
-  // tant que ce lien n'est pas clique UNE fois, les demandes ne partent pas.
-  var FORM_ENDPOINT = "https://formsubmit.co/ajax/info@prosecutec.com";
+  var FORM_ENDPOINT = ""; // ex: "https://formspree.io/f/xxxxxx" (service gratuit). Vide = envoi via l'appli mail du visiteur.
   document.getElementById('devisForm').addEventListener('submit', function(e){
     e.preventDefault();
     var f = e.target, ok = document.getElementById('ok');
     var body = "Nom : " + f.nom.value + "\n" + "Téléphone : " + f.tel.value + "\n" + "Commune : " + f.commune.value + "\n" + "Type de travaux : " + f.type.value + "\n\n" + f.detail.value;
     if (FORM_ENDPOINT) {
       fetch(FORM_ENDPOINT, {method:'POST', headers:{'Accept':'application/json'}, body:new FormData(f)})
-        .then(function(r){ return r.json(); })
-        .then(function(d){
-          if (d && String(d.success) === "true") { f.reset(); window.location.href = "merci.html"; return; }
-          throw new Error(d && d.message ? d.message : "envoi refuse");
-        })
-        .catch(function(){
-          ok.innerHTML = "Votre demande n'a pas pu partir. Appelez-moi au <a href=\"tel:+33668798706\">06 68 79 87 06</a> ou écrivez à <a href=\"mailto:info@prosecutec.com\">info@prosecutec.com</a>.";
-          ok.style.display='block';
-        });
+        .then(function(r){ if(!r.ok) throw new Error(); ok.textContent = "Merci, votre demande est bien envoyée. Je vous recontacte rapidement."; ok.style.display='block'; f.reset(); })
+        .catch(function(){ ok.textContent = "Envoi impossible pour le moment. Réessayez ou écrivez à info@prosecutec.com."; ok.style.display='block'; });
     } else {
       ok.style.display='block';
       window.location.href = "mailto:info@prosecutec.com?subject=" + encodeURIComponent("Demande de devis — " + f.commune.value) + "&body=" + encodeURIComponent(body);
